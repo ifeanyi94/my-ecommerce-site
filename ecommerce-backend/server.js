@@ -75,6 +75,15 @@ app.post('/create-payment-intent', async (req, res) => {
 
 // Start the server
 const PORT = process.env.PORT || 5000;
+
+// Serve static files from the frontend (Vite's dist folder)
+app.use(express.static(path.join(__dirname, 'client', 'dist')));
+
+// Catch-all route for SPA (React Router)
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'client', 'dist', 'index.html'));
+});
+
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
