@@ -17,26 +17,7 @@ function App() {
   });
   
   
-  const handleBuyNow = async (product) => {
-    try {
-      const res = await fetch("http://localhost:5000/create-payment-intent", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ product }),
-      });
   
-      const { clientSecret } = await res.json();
-  
-      navigate("/checkout", {
-        state: {
-          clientSecret,
-          product,
-        },
-      });
-    } catch (error) {
-      console.error("Buy Now error:", error);
-    }
-  };
   
   return (
     <BrowserRouter> 
@@ -54,22 +35,7 @@ function App() {
         </Routes>   
     </BrowserRouter>   
 
-    // <div className="App">
-    //   <header className="App-header">
-    //     <img src={logo} className="App-logo" alt="logo" />
-    //     <p>
-    //       Editin.jsx <code>src/App.js</code> and save to reload.
-    //     </p>
-    //     <a
-    //       className="App-link"
-    //       href="https://reactjs.org"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       Learn React
-    //     </a>
-    //   </header>
-    // </div>
+
   );
 }
 
