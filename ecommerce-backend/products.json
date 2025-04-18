@@ -1,0 +1,35 @@
+{
+    "products": [
+      {
+        "id": 1,
+        "name": "Wireless Headphones",
+        "price": 5000,
+        "image": "http://localhost:5000/images/wirelessHeadphones.png",
+        "description": "High-quality wireless headphones with noise cancellation and long battery life."
+      },
+      {
+        "id": 2,
+        "name": "Smartphone",
+        "price": 20000,
+        "image": "http://localhost:5000/images/smartPhone.png",
+        "description": "Latest model smartphone with advanced features and high-resolution camera."
+
+      },
+      {
+        "id": 3,
+        "name": "Laptop",
+        "price": 45000,
+        "image": "http://localhost:5000/images/laptop.png",
+        "description": "Powerful laptop with high performance and sleek design."
+      },
+      {
+        "id": 4,
+        "name": "Smartwatch",
+        "price": 15000,
+        "image": "http://localhost:5000/images/smartWatch.png",
+        "description": "Stylish smartwatch with fitness tracking and notification features."
+      }
+      
+
+    ]
+  }
