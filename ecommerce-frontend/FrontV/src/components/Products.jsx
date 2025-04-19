@@ -12,7 +12,7 @@ const Products = ({ cart, setCart }) => {
   const handleBuyNow = useHandleBuyNow();
 
   useEffect(() => {
-    fetch("http://localhost:5000/products")
+    fetch(`${import.meta.env.VITE_BACKEND_URL}/products`)
       .then((res) => res.json())
       .then((data) => setProducts(data))
       .catch((err) => console.error("Error fetching products:", err));

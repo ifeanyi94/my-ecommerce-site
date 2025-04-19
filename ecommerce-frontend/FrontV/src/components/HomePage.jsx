@@ -23,7 +23,7 @@ const HomePage = ({ cart, setCart}) => {
   
 /// Fetch products from the server when the component mounts
   useEffect(() => {
-    fetch("http://localhost:5000/products")
+    fetch(`${import.meta.env.VITE_BACKEND_URL}/products`)
       .then((response) => response.json())
       .then((data) => setProducts(data))
       .catch((error) => console.error("Error fetching products:", error));

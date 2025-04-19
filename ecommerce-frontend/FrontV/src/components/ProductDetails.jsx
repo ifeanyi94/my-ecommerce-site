@@ -13,7 +13,7 @@ const ProductDetails = ({ cart, setCart }) => {
 
 
   useEffect(() => {
-    fetch(`http://localhost:5000/products/${id}`)
+    fetch(`${import.meta.env.VITE_BACKEND_URL}/products/${id}`)
       .then((response) => response.json())
       .then((data) => {
         setProduct(data);

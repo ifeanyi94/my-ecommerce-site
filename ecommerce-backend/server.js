@@ -84,13 +84,7 @@ app.get('*', (req, res) => {
 });
 
 
-// Serve static files from the frontend (Vite's dist folder)
-app.use(express.static(path.join(__dirname, 'client', 'dist')));
 
-// Catch-all route for SPA (React Router)
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'client', 'dist', 'index.html'));
-});
 
 app.listen(PORT, () => { // Start the server on the specified port
     console.log(`Server is running on port ${PORT}`);

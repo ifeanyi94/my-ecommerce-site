@@ -14,7 +14,7 @@ const Checkout = ({setCart}) => {
     useEffect(() => { // Fetch the client secret from the server if not passed in from Server/CheckoutUtils/ then here. This is done to ensure that the client secret is always available when the component mounts.
       const createPaymentIntent = async () => {
         try {
-          const res = await fetch("http://localhost:5000/create-payment-intent", {
+          const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/create-payment-intent`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ product }),

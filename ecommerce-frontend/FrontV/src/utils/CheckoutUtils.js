@@ -7,7 +7,7 @@ export const useHandleBuyNow = () => {
   const handleBuyNow = async (itemOrCart) => {
     try {
       const isCart = Array.isArray(itemOrCart);
-      const res = await fetch("http://localhost:5000/create-payment-intent", {
+      const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/create-payment-intent`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(isCart ? { cart: itemOrCart } : { product: itemOrCart }),
