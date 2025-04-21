@@ -4,7 +4,7 @@
         "id": 1,
         "name": "Wireless Headphones",
         "price": 5000,
-        "image": "https://ecommerce-backend-scdt.onrender.com/photos/wirelessHeadphones.png",
+        "image": "https://ecommerce-backend-scdt.onrender.com/images/wirelessHeadphones.png",
         "description": "High-quality wireless headphones with noise cancellation and long battery life."
       },
       {
