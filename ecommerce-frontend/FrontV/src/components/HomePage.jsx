@@ -17,7 +17,7 @@ const HomePage = ({ cart, setCart}) => {
     "🛡️ Get a 2-year warranty on your purchase!",
     "💬 Nicola says 'It's not just a store, it's a family to me!'",
   ];
-  const [currentBannerIndex, setCurrentBannerIndex] = useState(0);
+  const [currentBannerIndex, setCurrentBannerIndex] = useState(0); 
   const handleBuyNow = useHandleBuyNow();
 
   
