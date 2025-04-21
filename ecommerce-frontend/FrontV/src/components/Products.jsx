@@ -138,8 +138,9 @@ const Products = ({ cart, setCart }) => {
         </motion.div>
       </main>
 
-      <footer className="bg-gray-800 text-white py-4 flex items-center justify-center mt-auto">
-        <img src="/src/images/EcommLogo2.svg" className="h-10 animate-pulse ml-auto" alt="logo" />
+      <footer className="h-[100px] bg-gray-800 flex items-center justify-center border-t mt-auto">
+        <img className="h-12 ml-auto animate-pulse" src="https://ecommerce-backend-scdt.onrender.com/images/logo.svg" alt="logo"/>
+
       </footer>
     </div>
   );
