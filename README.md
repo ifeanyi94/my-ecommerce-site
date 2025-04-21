@@ -11,7 +11,7 @@ A modern, responsive full stack e-commerce store built with:
 
 ---
 
-## 📁 Folder Structure (Monorepo)
+## 📁 Folder Structure 
 
 ```bash
 project/
