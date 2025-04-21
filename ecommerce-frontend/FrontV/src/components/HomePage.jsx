@@ -200,7 +200,7 @@ const HomePage = ({ cart, setCart}) => {
 
       </main>
       <footer className="h-[100px] bg-gray-800 flex items-center justify-center border-t mt-auto">
-        <img className="h-12 ml-auto animate-pulse" src="https://ecommerce-backend-scdt.onrender.com/images/EcommLogo2.svg" alt="logo"/>
+        <img className="h-12 ml-auto animate-pulse" src="https://ecommerce-backend-scdt.onrender.com/images/logo.svg" alt="logo"/>
 
       </footer>
       
