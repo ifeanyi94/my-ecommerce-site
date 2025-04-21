@@ -14,17 +14,24 @@ const path = require('path');
 app.use('/images', express.static(path.join(__dirname, 'images')));
 
 
-const products = JSON.parse(fs.readFileSync('./products.json', 'utf-8')).products;
+const products = JSON.parse(fs.readFileSync(path.join(__dirname, 'products.json'), 'utf-8')).products;
 console.log('Loaded products',products) // Log the products to the console
 console.log('Type of products',typeof products) // Log the type of products to the console
 
 
 // Define a route to fetch all products
 app.get('/products', (req, res) => {
-    res.json(products) // Send the products as a JSON response
-    
-    console.log(process.env.STRIPE_SECRET_KEY)
-})
+    try {
+        const products = JSON.parse(
+            fs.readFileSync(path.join(__dirname, 'products.json'), 'utf-8')
+        ).products;
+        res.json(products);
+    } catch (error) {
+        console.error("Error loading products:", error);
+        res.status(500).json({ error: "Failed to load products" });
+    }
+});
+
 
 // Define a route to fetch a single product by ID
 app.get('/products/:id', (req, res) => { 
